@@ -1,10 +1,10 @@
-## Activitat de mòduls i compilació separada per AP2
+# Activitat de mòduls i compilació separada per AP2
 
-Guió de l'activitat
+## Guió de l'activitat
 
 1. Descarregueu el repositori amb l'activitat: `git clone git@github.com:jordi-petit/ap2-moduls.git`.
 
-1. Entreu al directori `ap2-moduls.git` i compileu el projecte amb `make`.
+1. Entreu al directori `ap2-moduls` i compileu el projecte amb `make`.
 
 1. Proveu el programa principal.
 
@@ -29,7 +29,7 @@ Guió de l'activitat
     8
     ```
 
-1. Investigueu el fitxer `Makefile`. Proveu d'esborrar algun fitxer `.o` i recompileu.
+1. Investigueu el fitxer `Makefile`. Proveu d'esborrar algun fitxer `.o` i recompileu. Mireu els fitxers al vostre directori. Proveu un `make clean`.
 
 1. Estudieu el mòdul `Point` amb la seva especificació a `Point.hh` i la seva implementació
    a `Point.cc`. Fixeu-vos en el patró del `#ifdef ... #endif` al `.hh` i la definició
