@@ -2,7 +2,7 @@
 
 ## Guió de l'activitat
 
-1. Descarregueu el repositori amb l'activitat: `git clone git@github.com:jordi-petit/ap2-moduls.git`.
+1. Descarregueu el repositori amb l'activitat: `git https://github.com/jordi-petit/ap2-moduls`.
 
 1. Entreu al directori `ap2-moduls` i compileu el projecte amb `make`.
 
