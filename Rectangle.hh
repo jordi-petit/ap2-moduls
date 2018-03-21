@@ -54,7 +54,7 @@ public:
     bool operator!= (const Rectangle& r) const;
 
     /** Intersects this rectangle with another rectangle. */
-    Rectangle& operator*= (const Rectangle& r) const;
+    Rectangle& operator*= (const Rectangle& r);
 
     /** Returns the intersection of this rectangle with another rectangle. */
     Rectangle operator* (const Rectangle& r) const;
