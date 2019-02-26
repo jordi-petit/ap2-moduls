@@ -36,11 +36,13 @@
    dels mètodes al `.cc`.
 
 1. Estudieu ara el mòdul `Rectangle`, que es dóna mig implementat: La seva interfície
-   a `Ractangle.hh` és sencera però la seva implementació a `Rectangle.hh` és incompleta.
+   a `Ractangle.hh` és sencera però la seva implementació a `Rectangle.cc` és incompleta.
    Completeu-la.
 
 1. Estudieu el programa principal `main.cc`. La part del tractament de rectangles és
    incompleta. Completeu-la.
+   
+1. Mireu el fitxer `README.md` com està escrit en [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 1. Si teniu temps, estudieu ara el mòdul `Circle`, de qual només es dóna la seva
    interfície. Completeu la seva implementació i completeu el programa principal
