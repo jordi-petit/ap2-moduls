@@ -20,6 +20,7 @@ main.exe: main.o Point.o Rectangle.o Circle.o
 
 
 ## Dependencies between files
+# (we don't need to precise how to produce them, Makefile already knows)
 
 main.o: main.cc Point.hh Rectangle.hh Circle.hh
 
