@@ -21,14 +21,11 @@ main.exe: main.o Point.o Rectangle.o Circle.o
 
 ## Dependencies between files
 
-main.cc: Point.hh Rectangle.hh Circle.hh
+main.o: main.cc Point.hh Rectangle.hh Circle.hh
 
-Point.cc: Point.hh
+Point.o: Point.cc Point.hh
 
-Rectangle.cc: Rectangle.hh
+Rectangle.o: Rectangle.cc Rectangle.hh Point.hh
 
-Circle.cc: Circle.hh
+Circle.o: Circle.cc Circle.hh Point.hh
 
-Rectangle.hh: Point.hh
-
-Circle.hh: Point.hh
