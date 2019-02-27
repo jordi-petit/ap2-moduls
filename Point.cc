@@ -37,7 +37,7 @@ double Point::distance (const Point& p) const {
 }
 
 
-    /** Returns the radius of this point (distance from the origin). */
+/** Returns the radius of this point (distance from the origin). */
 double Point::radius () const {
     return sqrt(x*x + y*y);
 }
@@ -62,7 +62,7 @@ bool Point::operator!= (const Point& p) const {
 }
 
 
-/** Returns the angle of the polar coordinate of this point. */
+/** Adds the coordinates of p to this point and returns this point. */
 Point& Point::operator+= (const Point& p) {
     x += p.x;
     y += p.y;
