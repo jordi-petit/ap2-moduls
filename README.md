@@ -1,31 +1,49 @@
-# Defines the flags for compiling with C++.
-CXXFLAGS = -Wall -std=c++11 -O2
+# Activitat de mòduls i compilació separada per AP2
 
-# Rule to compile everything (make all).
-# Because it is the first rule, it is also the default rule (make).
-all: main.exe
+## Guió de l'activitat
 
-# Rule to clean object and executable files (make clean).
-clean:
-	rm -f main.exe *.o
+1. Descarregueu el repositori amb l'activitat: `git clone https://github.com/jordi-petit/ap2-moduls`.
 
-# Rule to link the executable from then object files.
-#
-# The following default variables are used:
-# 		$^ is the names of all the prerequisites
-# 		$@ is the name of the target of the rule
-# 		$(CXX) is the name of the C++ compiler
-main.exe: main.o Point.o Rectangle.o Circle.o
-	$(CXX) $^ -o $@
+1. Entreu al directori `ap2-moduls` i compileu el projecte amb `make`.
 
+1. Proveu el programa principal.
 
-## Dependencies between files
+    Exemple d'entrada:
 
-main.o: main.cc Point.hh Rectangle.hh Circle.hh
+    ```text
+    point_def p 3 4
+    point_copy q p
+    point_get_x q
+    point_get_y q
+    point_add q p
+    point_get_x q
+    point_get_y q
+    ```
 
-Point.o: Point.cc Point.hh
+    Exemple de sortida:
 
-Rectangle.o: Rectangle.cc Rectangle.hh Point.hh
+    ```text
+    3
+    4
+    6
+    8
+    ```
 
-Circle.o: Circle.cc Circle.hh Point.hh
+1. Investigueu el fitxer `Makefile`. Proveu d'esborrar algun fitxer `.o` i recompileu de nou amb `make`. Mireu els fitxers al vostre directori. Proveu un `make clean`.
 
+1. Estudieu el mòdul `Point` amb la seva especificació a `Point.hh` i la seva implementació
+   a `Point.cc`. Fixeu-vos en el patró del `#ifdef ... #endif` al `.hh` i la definició
+   dels mètodes al `.cc`.
+
+1. Estudieu ara el mòdul `Rectangle`, que es dóna mig implementat: La seva interfície
+   a `Ractangle.hh` és sencera però la seva implementació a `Rectangle.cc` és incompleta.
+   Completeu-la.
+
+1. Estudieu el programa principal `main.cc`. La part del tractament de rectangles és
+   incompleta. Completeu-la.
+   
+1. Mireu el fitxer `README.md` com està escrit en [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
+1. Si teniu temps, estudieu ara el mòdul `Circle`, de qual només es dóna la seva
+   interfície. Completeu la seva implementació i completeu el programa principal
+   perquè l'utilitzi.
